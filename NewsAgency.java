@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class NewsAgency {
 
     public static void main(String[] args) {
@@ -14,25 +11,27 @@ public class NewsAgency {
         Subscriber macalanda = new Subscriber();
         macalanda.setSubcriberName("Macalanda");
 
-        List<Subscriber> subscriberList = new ArrayList<>();
-        subscriberList.add(pia);
-        subscriberList.add(katleya);
-        subscriberList.add(macalanda);
-
         News news = new News();
-        news.setName("Super Typhoon Storms the Bicol Region.");
-        news.setSubscriberList(subscriberList);
+        news.setNewsTitle("Super Typhoon Storms the Bicol Region.");
 
+        // subscribers
+        news.subscribed(pia);
+        news.subscribed(katleya);
+        news.subscribed(macalanda);
+
+        // notify subscribers
         System.out.println("Updates!");
         System.out.println(news.notifySubscriber());
 
-        news.unsubscribed(pia);
+        news.unsubscribed(pia); // modify subscription
 
         Subscriber josh = new Subscriber();
         josh.setSubcriberName("Josh");
         news.subscribed(josh);
 
-        System.out.println("Updates recently!");
+        // notify subscriber again
+        news.setNewsTitle("QC Declares Class Suspension.");
+        System.out.println("Recently updates!");
         System.out.println(news.notifySubscriber());
 
     }
