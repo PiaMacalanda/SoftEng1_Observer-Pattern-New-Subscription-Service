@@ -37,3 +37,6 @@ Ensure that the communication between the news agency and subscribers is decoupl
 
 * The system should be scalable to handle a growing number of subscribers without compromising performance.
 * Ensure that the implementation follows object-oriented design principles
+
+### UML Diagram:
+![Observer Pattern-Macalanda](https://github.com/user-attachments/assets/662fd72f-2e03-4ade-b43f-d05da6506bc8)
